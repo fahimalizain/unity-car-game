@@ -34,9 +34,9 @@ public class RearWheelDrive : MonoBehaviour {
 	// this helps us to figure our which wheels are front ones and which are rear
 	public void Update()
 	{
-		float angle = maxAngle * Input.GetAxis("Horizontal");
-		float torque = maxTorque * Input.GetAxis("Vertical");
-
+		float angle = maxAngle * UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager.GetAxis("Horizontal");
+		bool braking = UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager.GetButton("Jump");
+		float torque = braking ? 0 : maxTorque * UnityStandardAssets.CrossPlatformInput.CrossPlatformInputManager.GetAxis("Vertical");
 		foreach (WheelCollider wheel in wheels)
 		{
 			// a simple car where front wheels steer while rear ones drive
@@ -44,7 +44,10 @@ public class RearWheelDrive : MonoBehaviour {
 				wheel.steerAngle = angle;
 
 			if (wheel.transform.localPosition.z < 0)
+			{
+				wheel.brakeTorque = braking ? maxTorque : 0;
 				wheel.motorTorque = torque;
+			}
 
 			// update visual wheels if any
 			if (wheelShape) 
