@@ -7,6 +7,7 @@ public class RearWheelDrive : MonoBehaviour {
 
 	public float maxAngle = 30;
 	public float maxTorque = 300;
+	public float maxBrakeTorque = 1000;
 	public GameObject wheelShape;
 
 	// here we find all the WheelColliders down in the hierarchy
@@ -45,7 +46,7 @@ public class RearWheelDrive : MonoBehaviour {
 
 			if (wheel.transform.localPosition.z < 0)
 			{
-				wheel.brakeTorque = braking ? maxTorque : 0;
+				wheel.brakeTorque = braking ? maxBrakeTorque : 0;
 				wheel.motorTorque = torque;
 			}
 
