@@ -348,7 +348,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1402603180802918}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -380,8 +380,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAngle: 30
-  maxTorque: 300
-  wheelShape: {fileID: 0}
+  maxTorque: 500
+  maxBrakeTorque: 1000
+  wheelShape: {fileID: 1089744260275876, guid: e88478952e3e29646a941f62c8a7e53e, type: 2}
 --- !u!114 &114954177705760282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,24 +407,24 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.33
   m_SuspensionSpring:
-    spring: 19908.918
-    damper: 3185.4272
+    spring: 9954.462
+    damper: 1592.7139
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620004
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 0.7713667
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 10
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 20
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 4.5
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 4.5
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!146 &146212468004565882
@@ -435,24 +436,24 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.33
   m_SuspensionSpring:
-    spring: 20014.682
-    damper: 3202.3489
+    spring: 10007.339
+    damper: 1601.1743
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19619998
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 0.7713667
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 10
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 20
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 4.5
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 4.5
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!146 &146660488086703516
@@ -464,24 +465,24 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.33
   m_SuspensionSpring:
-    spring: 30100.52
-    damper: 4816.0835
+    spring: 15050.261
+    damper: 2408.0417
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 0.7713667
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 10
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 20
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 4.5
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 4.5
     m_Stiffness: 1
   m_Enabled: 1
 --- !u!146 &146920053368493168
@@ -493,23 +494,23 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.33
   m_SuspensionSpring:
-    spring: 29975.87
-    damper: 4796.139
+    spring: 14987.936
+    damper: 2398.0696
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 0.7713667
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 10
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 20
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
+    m_ExtremumSlip: 1
+    m_ExtremumValue: 4.5
+    m_AsymptoteSlip: 1
+    m_AsymptoteValue: 4.5
     m_Stiffness: 1
   m_Enabled: 1
